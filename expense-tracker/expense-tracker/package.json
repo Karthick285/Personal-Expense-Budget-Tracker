@@ -1,0 +1,27 @@
+{
+  "name": "personal-expense-budget-tracker",
+  "version": "1.0.0",
+  "description": "Full-stack Personal Expense & Budget Tracker built with React, Tailwind CSS, Recharts, Express, and MySQL.",
+  "scripts": {
+    "start": "npm run start --prefix backend",
+    "dev": "node start.js",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "db:init": "npm run db:init --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend",
+    "test:backend": "node backend/test_api.js",
+    "test:e2e": "node backend/test_e2e_flow.js"
+  },
+  "keywords": [
+    "expense-tracker",
+    "budget-manager",
+    "react",
+    "mysql",
+    "express",
+    "recharts",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "ISC"
+}
