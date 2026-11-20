@@ -1,0 +1,12 @@
+{
+  "name": "expense-tracker-root",
+  "version": "1.0.0",
+  "description": "Root workspace proxy for Personal Expense & Budget Tracker",
+  "scripts": {
+    "dev": "npm run dev --prefix expense-tracker",
+    "start": "npm run dev --prefix expense-tracker",
+    "dev:backend": "npm run dev:backend --prefix expense-tracker",
+    "dev:frontend": "npm run dev:frontend --prefix expense-tracker",
+    "test": "npm run test:e2e --prefix expense-tracker"
+  }
+}
