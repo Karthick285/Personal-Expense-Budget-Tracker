@@ -78,6 +78,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Serve the built React frontend (frontend/dist) so one server runs the whole site
+const frontendDist = path.resolve(__dirname, '../frontend/dist');
+app.use(express.static(frontendDist));
+app.get('*', (req, res, next) => {
+  if (req.originalUrl.startsWith('/api')) return next();
+  res.sendFile(path.join(frontendDist, 'index.html'), (err) => {
+    if (err) next();
+  });
+});
+
 // Global Centralized Error Handler
 app.use(errorHandler);
 
